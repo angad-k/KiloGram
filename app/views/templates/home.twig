@@ -1,0 +1,18 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}KiloGram{% endblock %}
+
+{% block body %}
+<div class = "topFlexContainer">
+    <span id = "brandName"><h1>KiloGram</h1></span>
+    <span id = "userName"><h2>{{username}}</h2></span>
+</div>
+<hr class = "hr1">
+<div class = "feedContainer">
+    <script src = "/assets/scripts/loadFeed.js"></script>
+    <div class = "feed" id = "feed" onload="loadTrending();"></div>
+    
+</div>
+{% include("templates/bottom.twig") %}
+
+{% endblock %}

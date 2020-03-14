@@ -1,0 +1,11 @@
+{
+	"name": "ANGAD/UltimateInstaClone",
+	"description": "Be-Niyaazi had se gujri, banda-parvar kab talak? Hum bolenge haal-e-dil, wo farmayenge kya???",
+	"require": {
+        "torophp/torophp": "dev-master",
+		"twig/twig": "^3.0"
+	},
+	"autoload": {
+		"classmap": ["app"]
+	}
+}

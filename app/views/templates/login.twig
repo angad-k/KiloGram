@@ -1,0 +1,40 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}KiloGram{% endblock %}
+
+{% block body %}
+<div class = "topFlexContainer">
+    <span id = "brandName"><h1>KiloGram</h1></span>
+</div>
+<hr class = "hr1">
+<div style = "margin-left: 5px;">
+    Eh... Let's get this out of the way before you go out there KiloGramming.
+    Login or Sign-up below and you'll be KiloGramming in no time!
+</div>
+<hr class = "hr1">
+<form action = "/" method="POST" style = "margin-left: 5px; margin-right: 5px">
+    <h2><u>Log-in</u></h2>
+    <h3>Username : </h3><input type = "text" name = "username">
+    <br>
+    <h3>Password :</h3><input type = "password" name = "password">
+    <br>
+    <input type = "text" name = "logsin" value="login" style="visibility: collapse;">
+    <input type = "submit">
+</form>
+<hr class = "hr1">
+<form action = "/" method="POST" style = "margin-left: 5px; margin-right: 5px">
+    <h2><u>Sign Up</u></h2>
+    <div class = "errorMsg">
+        <h3>{{errorMsgSignup}}</h3>
+    </div>
+    <h3>E-mail : </h3><input type = "text" name = "email">
+    <br>
+    <h3>Username : </h3><input type = "text" name = "username">
+    <br>
+    <h3>Password :</h3><input type = "password" name = "password">
+    <br>
+    <input type = "text" name = "logsin" value="signup" style="visibility: collapse;">
+    <input type = "submit">
+</form>
+<hr class = "hr1">
+{% endblock %}
