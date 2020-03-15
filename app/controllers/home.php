@@ -10,7 +10,8 @@ class Home
         {
             echo \View\Loader::make()->render("templates/home.twig",
             array(
-                "username" => $_SESSION['username']
+                "username" => $_SESSION['username'],
+                "current" => $_SESSION['current']
             ));
         }
         else
@@ -37,8 +38,8 @@ class Home
                         if($count == 0)
                         {
                             \Model\Home::createAccount($_POST['username'], $_POST['password'], $_POST['email']);
-                            $_SESSION['username'] = $_POST['username'];
                             header("Location: /");
+                            echo "Successfully registered. Now, login and get KiloGramming!";
                             exit();
 
                         }
@@ -76,7 +77,20 @@ class Home
         }
         if($_POST[logsin] == "login")
         {
-            
+            $validation = \Model\Home::validate($_POST['username'], $_POST['password']);
+            if($validation)
+            {
+                $_SESSION['username'] = $_POST['username'];
+                header("Location: /");
+                exit();
+            }
+            else
+            {
+                echo \View\Loader::make()->render("templates/login.twig",
+                array(
+                    "errorMsgLogin" => "Incorrect username or password!"
+                ));
+            }
         }
     }
 }

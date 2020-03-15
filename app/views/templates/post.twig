@@ -7,13 +7,19 @@
     So... You've decided to share those amazing photos with the world as if the world gives two cents to them. CoOoooOl.... Just use the form below!
 </div>
 <hr class = "hr1">
-<form action = "/Post" method="POST" enctype="multipart/form-data" style = "margin-left: 5px; margin-right: 5px">
+<form id = "postForm" action = "/Post" method="POST" enctype="multipart/form-data" style = "margin-left: 5px; margin-right: 5px">
+    <div class = "errorMsg">
+        <h3>{{uploadError}}</h3>
+    </div>
+    <div class = "greenText">
+        <h3>{{uploadMsg}}</h3>
+    </div>
     <h2><u>Add Photos :</u></h2>
-    <h3>Upload : </h3><input type = "file" name = "photo">
+    <h3>Upload : </h3><input type="file" name="fileToUpload" id="fileToUpload">
     <br>
-    <h3>Caption :</h3><input type = "caption" name = "caption" style="width : 100%; height : 200px;">
+    <h3>Caption :</h3>
+    <textarea rows="7" style = "width: 80%;" name="caption" form="postForm"></textarea>
     <br>
-    <input type = "text" name = "logsin" value="login" style="visibility: collapse;">
     <input type = "submit">
 </form>
 

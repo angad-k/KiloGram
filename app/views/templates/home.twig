@@ -9,8 +9,16 @@
 </div>
 <hr class = "hr1">
 <div class = "feedContainer">
+    <script src = "/assets/scripts/addPhotos.js"></script>
     <script src = "/assets/scripts/loadFeed.js"></script>
-    <div class = "feed" id = "feed" onload="loadTrending();"></div>
+    {% if (current == 'new') %}
+    <div class = "feed" id = "feed"></div><script>loadNew();</script>
+    {% elseif (current == 'upload') %}
+    <div class = "feed" id = "feed"></div><script>loadAdder();</script>
+    {% else %}
+    <div class = "feed" id = "feed"></div><script>loadTrending();</script>
+    {% endif %}
+    
     
 </div>
 {% include("templates/bottom.twig") %}

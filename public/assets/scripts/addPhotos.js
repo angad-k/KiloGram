@@ -10,3 +10,8 @@ function loadAdder()
     xhttp.open("GET", "/Post", true);
     xhttp.send();
 }
+
+function upload()
+{
+  
+}
