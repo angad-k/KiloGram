@@ -11,6 +11,12 @@ hr.hr1
     margin-left: 2px;
     margin-right: 2px;
 }
+hr.hr2
+{
+    border: 1px solid #FFFFFF;
+    margin-left: 2px;
+    margin-right: 2px;
+}
 .topFlexContainer
 {
     display: flex;
@@ -54,8 +60,18 @@ hr.hr1
     display: flex;
     
 }
+.bottomPlaceholder
+{   
+    height: 10%;
+    background-color: #2e2e2e;
+    color: white;    
+    display: inline-block;
+    margin-top: 70px;
+}
 .bottomContainerflex
 {
+    margin-top: 100px;
+    padding : 100px;
     height: 100%;
     
 }
@@ -104,4 +120,46 @@ input[type=submit]
 .greenText
 {
     color: #09ff00;
+}
+.post
+{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: solid 2px #000000;
+    margin : 3px 2px 3px 2px;
+}
+.postUsername
+{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+    padding-top: 2px;
+    padding-left: 2px;
+}    
+.postCaption
+{
+    margin: 5px 5px 5px 5px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+.postLikes
+{
+    margin: 5px 5px 5px 5px;
+    padding-top: 2px;
+    padding-left: 2px; 
+}
+.postPhoto
+{
+    display: block;
+    text-align: center;
+}
+.postBottomPanel
+{
+    display: flex;
+    align-items: center;
+}
+.postLikes
+{
+    padding: 2px;
+    border: solid 2px #000000;
 }
