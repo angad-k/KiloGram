@@ -127,12 +127,13 @@ input[type=submit]
     background-color: #FFFFFF;
     border: solid 2px #000000;
     margin : 3px 2px 3px 2px;
+    padding: 4px 4px 4px 4px;
 }
 .postUsername
 {
     background-color: #FFFFFF;
     border-radius: 10px;
-    margin: 5px 5px 5px 5px;
+    margin: 3px 3px 3px 3px;
     padding-top: 2px;
     padding-left: 2px;
 }    
@@ -141,6 +142,7 @@ input[type=submit]
     margin: 5px 5px 5px 5px;
     padding-top: 2px;
     padding-left: 2px;
+    width: 100%;
 }
 .postLikes
 {
@@ -162,4 +164,20 @@ input[type=submit]
 {
     padding: 2px;
     border: solid 2px #000000;
+}
+.commentBox
+{
+    width: 80%;
+    margin: 5px 5px 5px 5px;
+    display: block;
+}
+.submitComment
+{
+    margin : 4px 4px 4px 4px;
+    padding: 1px 1px 1px 1px;
+    border: solid 2px #000000;
+}
+.postComments
+{
+    margin: 4px 4px 4px 4px;
 }

@@ -4,7 +4,11 @@
 
 {% block body %}
 
-<script src = "/assets/scripts/postActions.js"></script>
+
+
+{% if posts|length == 0 %}
+ <h3>No posts to show here. :(</h3>
+{% endif %}
 {% for post in posts %}
 
 <div class = "post" id = {{post.ID}}>
@@ -17,19 +21,16 @@
     </div>
     <hr class = "hr1">
     <div class = "postBottomPanel">
-        <span class = "upvote">
+        <span class = "upvote" onclick="upvote(this.parentElement.parentElement.id);">
             <img src = "/assets/icons/upvote.png" style = "height: 25px;">
         </span>
-        <span class = "upvote" onclick=
-            "
-            console.log(this.parentElement.parentElement.id);
-            ">
+        <span class = "upvote" onclick="writeComments(this.parentElement.parentElement.id);">
             <img src = "/assets/icons/comment.png" style = "height: 25px;">
         </span>
         <span class = "postLikes">
-            <b>likes</b> : {{post.likes}}
+            <b>likes</b> : <span id = likeCount{{post.ID}}>{{post.likes}}</span>
         </span>
-        <span class = "postLikes" >
+        <span class = "postLikes" onclick="showComments(this.parentElement.parentElement.id);" >
             <b>Read comments</b>
         </span>
     </div>
@@ -45,6 +46,10 @@
 
 
 {% endfor %}
+{% if current == "account" %}
+<a href = "/Logout"><h3>Click here to logout.</h3></a>
+{% endif %}
+
 <div class = "bottomPlaceholder">
 </div>
 

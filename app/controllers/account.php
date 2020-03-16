@@ -2,15 +2,16 @@
 
 namespace Controller;
 session_start();
-class Trending 
+class Account 
 {
     public function get()
     {
-        $_SESSION['current'] = "trending";
-        $posts = \Model\Latest::getTrending();
+        $_SESSION['current'] = "account";
+        $posts = \Model\Latest::getAccount();
         echo \View\Loader::make()->render("templates/latest.twig",
         array(
-            "posts" => $posts
+            "posts" => $posts,
+            "current" => $_SESSION['current']
         ));
     }
 }

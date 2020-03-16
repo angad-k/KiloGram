@@ -6,5 +6,10 @@ Toro::serve(array(
     "/" => "\Controller\Home",
     "/Feed/Trending" => "\Controller\Trending",
     "/Feed/Latest" => "\Controller\Latest",
-    "/Post" => "\Controller\Post"
+    "/Post" => "\Controller\Post",
+    "/submitComment" => "\Controller\SubmitComment",
+    "/showComments" => "\Controller\ShowComments",
+    "/upvote" => "\Controller\Upvote",
+    "/Account" => "\Controller\Account",
+    "/Logout" => "\Controller\Logout"
 ));

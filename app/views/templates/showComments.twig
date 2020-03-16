@@ -1,0 +1,23 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}Comments{% endblock %}
+
+{% block body %}
+
+{% if comments|length == 0 %}
+ <h3>No comments. </h3>
+{% else %}
+<hr class ="hr1">
+<b>Comments:</b>
+<br>
+{% for comment in comments %}
+
+<b>{{comment.username}}:</b> {{comment.comment}}
+<br>
+
+{% endfor %}
+
+{% endif %}
+
+
+{% endblock %}
