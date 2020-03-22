@@ -19,3 +19,5 @@ So you ask how to get this ultimate instagram clone up and running on your PC?? 
 - The fire icon shall show the trending/most liked posts on your feed.
 - The plus icon let's you upload photos.
 - The avatar icon shall show you your posts and also let you change your username and display picture. 
+
+---
