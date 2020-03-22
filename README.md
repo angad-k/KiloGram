@@ -8,7 +8,7 @@ So you ask how to get this ultimate instagram clone up and running on your PC?? 
   ``
   ``
 - In the config folder, there's the *config.php* file. Edit it according to your DB settings.
-- Use the schema included in the config folder to set up the tables.
+- Use the schema included in the config folder to set up the database.
 
 ---
 
