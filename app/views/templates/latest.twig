@@ -4,7 +4,49 @@
 
 {% block body %}
 
+{% if current == "account" %}
 
+<div class = "accountDeets">
+    <h1>Hi, {{username}} </h1>
+    <div class = "errorMsg">
+        <h3>{{uploadError}}</h3>
+    </div>
+    <div class = "greenText">
+        <h3>{{uploadMsg}}</h3>
+    </div>
+    <hr class="hr1">
+    <div style = "display: flex; flex-wrap :wrap; justify-content:center; align-items:center">
+        <h3 style = "display: inline-block;">Your current username is {{username}}.</h3><span class = "postLikes" onclick="usernameToggler()" style = "margin-left: 7px;">Change username</span>
+    </div>
+    <div id = "usernameform" style="display: none;">
+        <form id = "changeUsername" style = "margin-left: 5px; margin-right: 5px">
+            
+            <h3 >New username : </h3><input type="text" style = "width: 100%; margin-bottom: 20px;" id="newUsername">
+            <br>
+            <span class = "postLikes" style = "margin-top: 10px; margin-left: 7px;" onclick="changeUsername();">Change username</span>
+        </form>
+    </div>
+    <br>
+    <h3>Your display picture :</h3> <br>
+    <img src = {{dp}} style = "max-width : 500px;  max-height :  500px; margin-bottom: 10px; display : inline-block;"> <br>
+    <script src = "assests/scripts/accountActions.js"></script>
+    <span class = "postLikes" style = "margin-top: 10px; margin-left: 7px;" onclick="DPtoggler();">Change DP</span>
+    <div id = "DPform" style="display: none; margin-bottom: 20px;">
+        <form id = "postForm" action = "/ChangeDP" method="POST" enctype="multipart/form-data" style = "margin-left: 5px; margin-right: 5px">
+            
+            <h3>Upload : </h3><input type="file" name="fileToUpload" id="fileToUpload">
+            <br>
+            <input type = "submit">
+        </form>
+    </div>
+    <hr class = "hr1">
+    <span class = "postLikes" style = "margin-top: 20px;" onclick="window.location.replace('/Logout');">Click here to logout.</span>
+
+
+</div>
+
+
+{% endif %}
 
 {% if posts|length == 0 %}
  <h3>No posts to show here. :(</h3>
@@ -13,7 +55,7 @@
 
 <div class = "post" id = {{post.ID}}>
     <div class = "postUsername">
-        <h3>{{post.username}}</h3>
+       <img src = {{post.DPurl}} style = "width : 50px; height : 50px; border-radius:100%; "> <h3 style = "display: inline-block; margin-left : 10px">{{post.username}}</h3>
     </div>
     <hr class = "hr1">
     <div class = "postPhoto">
@@ -46,9 +88,7 @@
 
 
 {% endfor %}
-{% if current == "account" %}
-<a href = "/Logout"><h3>Click here to logout.</h3></a>
-{% endif %}
+
 
 <div class = "bottomPlaceholder">
 </div>

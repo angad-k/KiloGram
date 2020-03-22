@@ -11,5 +11,7 @@ Toro::serve(array(
     "/showComments" => "\Controller\ShowComments",
     "/upvote" => "\Controller\Upvote",
     "/Account" => "\Controller\Account",
-    "/Logout" => "\Controller\Logout"
+    "/Logout" => "\Controller\Logout",
+    "/ChangeDP" => "\Controller\Account",
+    "/ChangeUsername" => "\Controller\ChangeUsername"
 ));

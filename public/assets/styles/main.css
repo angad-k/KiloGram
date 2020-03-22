@@ -136,6 +136,8 @@ input[type=submit]
     margin: 3px 3px 3px 3px;
     padding-top: 2px;
     padding-left: 2px;
+    display: flex;
+    align-content: center;
 }    
 .postCaption
 {
@@ -146,7 +148,7 @@ input[type=submit]
 }
 .postLikes
 {
-    margin: 5px 5px 5px 5px;
+    margin: 10px 5px 5px 5px;
     padding-top: 2px;
     padding-left: 2px; 
 }
@@ -164,6 +166,12 @@ input[type=submit]
 {
     padding: 2px;
     border: solid 2px #000000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.upvote
+{
+    cursor: pointer;
 }
 .commentBox
 {
@@ -180,4 +188,11 @@ input[type=submit]
 .postComments
 {
     margin: 4px 4px 4px 4px;
+}
+.accountDeets
+{
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
 }

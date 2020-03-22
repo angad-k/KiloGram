@@ -29,6 +29,15 @@ class Post
     {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $i = 0;
+        for ($i = 0; $i < strlen($target_file); $i++)
+        {
+            echo $i;
+            if($target_file[$i] == " ")
+            {
+                $target_file[$i] = "_";
+            }
+        }
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
